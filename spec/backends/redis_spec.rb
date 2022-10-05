@@ -142,7 +142,7 @@ describe Pallets::Backends::Redis do
     context 'with no more jobs to queue' do
       before do
         # Set up jobmasks
-        redis.sadd('jobmasks:baz', 'jobmask:foo')
+        redis.sadd?('jobmasks:baz', 'jobmask:foo')
 
         # Set up remaining key
         redis.set('remaining:baz', 1)
@@ -249,7 +249,7 @@ describe Pallets::Backends::Redis do
       redis.zadd('workflow-queue:baz', [[1, 'bar'], [2, 'baz'], [5, 'qux']])
 
       # Set up jobmasks
-      redis.sadd('jobmasks:baz', 'jobmask:foo')
+      redis.sadd?('jobmasks:baz', 'jobmask:foo')
 
       # Set up jobmask
       redis.zadd('jobmask:foo', [[-1, 'bar'], [-1, 'baz']])
