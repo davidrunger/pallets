@@ -7,8 +7,6 @@ gem 'appsignal'
 
 group :test do
   gem 'rspec'
-  # Better RSpec formatting
-  gem 'fuubar'
 end
 
 group :development, :test do
