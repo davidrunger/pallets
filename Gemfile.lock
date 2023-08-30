@@ -44,7 +44,7 @@ GEM
     timecop (0.9.5)
 
 PLATFORMS
-  x86_64-darwin-20
+  ruby
 
 DEPENDENCIES
   appsignal
